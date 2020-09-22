@@ -1,0 +1,40 @@
+{ 
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "EuaLP0pu3R/B6u81wqAERPLiUx8=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "oauth": {
+      "redirect": "/",
+      "github": {
+        "key": "a554f8c5ee7a4823b427",
+        "secret": "fb20b7ea44a3bec91112cc7cdf9fe6a140448b1d"
+      }
+    },
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb://localhost:27017/project_2"
+  
+}
